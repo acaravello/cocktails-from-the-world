@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perfect Cocktail | Search by Name</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+            <a class="navbar-brand text-uppercase" href="index.html">
+                <h1 class="sitename">PERFECT<span>COCKTAIL</span> </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Cocktail Name</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ingredient.html">Ingredient</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="filter-alcohol.html">Alcohol / Non Alcohol</a>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="dropdown">
+                    <a href="favorites.html" class="btn btn-danger">
+                           My Favorites
+                    </a>
+            </div>
+    </div>
+</nav>
+
+<div id="content" class="mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+                <div class="jumbotron col-12 col-md-10">
+                    <h1 class="text-center">
+                        Search Cocktails by Alcohol / Non Alcohol
+                    </h1>
+                    <div class="row">
+                        <div class="col-12">
+                                <form action="#" id="search-form">
+                                        <div class="form-group mt-4">
+                                                <select class="form-control search-alcohol" id="search">
+                                                    <option value="Alcoholic">Alcoholic</option>  
+                                                    <option value="Non_Alcoholic">Non Alcoholic</option>     
+                                                </select>
+                                        </div>
+                                        <div class="form-group pt-3">
+                                                <input type="hidden" id="type" value="alcohol">
+                                                <button type="submit" class="btn btn-success d-block">
+                                                    Get Cocktails
+                                                </button>
+                                        </div>
+                                </form>
+                                
+                        </div>
+
+                        <div class="col-12 mt-5 results-wrapper" style="display:none;" >
+                            <h1 class="text-center">Results: <span id="total"></span></h1>
+                            <div id="results" class="mt-5 row" ></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div> <!--#content-->
+
+<div class="modal fade" id="recipe" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"></h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <h3 class="alert alert-success">Preparation:</h3>
+                            <div class="description-text mb-4"></div>
+
+                            <h3  class="alert alert-success">Ingredients:</h3>
+                            <div class="ingredient-list">
+                                    <ul class="list-group"></ul>
+                            </div>
+                        <div class="ingredients mt-3">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+        </div>
+    </div><!--.modal-->
+
+<footer class="bg-primary p-4">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-4">
+                    <h1 class="sitename">PERFECT<span>COCKTAIL</span> </h1>
+                </div>
+            </div>
+        </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="js/CocktailAPI.js"></script>
+<script src="js/CocktailDB.js"></script>
+<script src="js/UI.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
